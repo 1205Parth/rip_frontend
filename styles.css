@@ -1,0 +1,194 @@
+/* General Reset and Base Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Controls Section */
+.controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Network Section */
+.network {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Router Element */
+.router {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.router.active {
+    background-color: #28a745;
+}
+
+#R1 {
+    top: 50px;
+    left: 50px;
+}
+
+#R2 {
+    top: 50px;
+    right: 50px;
+}
+
+#R3 {
+    bottom: 50px;
+    left: 50px;
+}
+
+#R4 {
+    bottom: 50px;
+    right: 50px;
+}
+
+.packet {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    transition: left 2s ease-in-out, top 2s ease-in-out;
+    z-index: 10;
+}
+
+.packet.hidden {
+    display: none;
+}
+
+/* Table Styling */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    font-size: 0.9rem;
+}
+/* Packet Styling */
+.packet {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
+    /* Glow effect */
+    transition: left 1s ease-in-out, top 1s ease-in-out, transform 0.5s;
+    /* Smooth animations */
+    z-index: 10;
+}
+
+.packet.hidden {
+    opacity: 0;
+    /* Hide packet smoothly */
+    pointer-events: none;
+}
+
+.packet.visible {
+    opacity: 1;
+    transform: scale(1.2);
+    /* Slight zoom effect */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .network {
+        height: 300px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    select {
+        font-size: 0.9rem;
+    }
+}

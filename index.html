@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIP Routing Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>RIP Routing Simulation</h1>
+
+        <div class="controls">
+            <label for="sourceRouter">Source Router:</label>
+            <select id="sourceRouter">
+                <option value="R1">R1</option>
+                <option value="R2">R2</option>
+                <option value="R3">R3</option>
+                <option value="R4">R4</option>
+            </select>
+
+            <label for="destinationRouter">Destination Router:</label>
+            <select id="destinationRouter">
+                <option value="R1">R1</option>
+                <option value="R2">R2</option>
+                <option value="R3">R3</option>
+                <option value="R4">R4</option>
+            </select>
+
+            <button id="startSimulation">Simulate</button>
+        </div>
+
+        <div class="network">
+            <div id="R1" class="router">R1</div>
+            <div id="R2" class="router">R2</div>
+            <div id="R3" class="router">R3</div>
+            <div id="R4" class="router">R4</div>
+            <div id="packet" class="packet hidden"></div>
+        </div>
+
+        <div id="pathTable">
+            <h2>Path Cost Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Hop Count</th>
+                        <th>Path</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
